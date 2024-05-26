@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/config.xsd">
+    <default>
+        <upsell_promotion>
+            <general>
+                <enabled>0</enabled>
+                <promo_product></promo_product>
+                <by_cart_qty>1</by_cart_qty>
+            </general>
+        </upsell_promotion>
+    </default>
+</config>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="softteams" translate="label" sortOrder="401">
+            <label>Soft Teams</label>
+        </tab>
+        <section id="sale_promotion" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Sale Promotion</label>
+            <tab>softteams</tab>
+            <resource>SoftTeams_SalePromotion::config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="promo_product" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Promo Product SKU</label>
+                    <comment>SKU of the product to be given for free</comment>
+                </field>
+<!--                <field id="by_cart_qty" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Apply Promo Rule based on Cart Items Qty</label>-->
+<!--                    <comment>Apply promo rule based on total cart items for example:i-e:1</comment>-->
+<!--                </field>-->
+<!--                <field id="enable_order_total" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Apply Free Product Promotion on Order Total</label>-->
+<!--                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+<!--                </field>-->
+<!--                <field id="order_total" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">-->
+<!--                    <label>Order Total</label>-->
+<!--                    <comment>Please add order total amount in this field.If you want to apply free promotion product based on order total </comment>-->
+<!--                </field>-->
+            </group>
+        </section>
+    </system>
+</config>
