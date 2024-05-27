@@ -17,11 +17,13 @@
  */
 /** @type Sale $block */
 use SoftTeams\SalePromotion\Block\Cart\Sale;
+// Retrieve the name of the promotional product
+$promoProductName = $block->escapeHtml($block->getPromoProductData()->getName());
 ?>
 <?php
-    if ($block->showPromo()): ?>
-        <div class="sale-banner">
-            Add one more item to your cart and get a "<b><?php echo $block->escapeHtml($block->getPromoProductData()->getName()); ?></b>" for free!
-        </div>
-    <?php endif;
+if ($block->showPromo()): ?>
+    <div class="sale-banner">
+        <?php echo __('Add one more item to your cart and get a "<b>%1</b>" for free!', $promoProductName); ?>
+    </div>
+<?php endif;
 ?>

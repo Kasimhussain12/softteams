@@ -121,7 +121,7 @@ class Sale extends Template
      * @return float
      * @throws NoSuchEntityException|LocalizedException
      */
-    public function getOrderTotal(): float
+    public function getOrderTotal()
     {
         return $this->checkoutSession->create()->getQuote()->getGrandTotal();
     }
